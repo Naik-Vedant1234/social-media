@@ -1,0 +1,691 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar{
+    height: 7vh;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0% 10px 10px 10px;
+    border-bottom: 2px solid black;
+}
+.brand{
+    display: flex;
+    width: 30%;
+}
+.brand1{
+    width: 75%;
+    display: flex;
+    height: 40px;
+}
+#search{
+    height: 75%;
+    width: 80%;
+}
+
+.dark_mode{
+    height: 50%;
+    width: 8%;
+    /* border: 0.1rem solid black; */
+    align-self: center;
+}
+
+.search_icon{
+    background-color: red;
+    height: 75%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icons{
+    display: flex;
+}
+
+.profile, .settings, .plus{
+    padding: 5px;
+    margin: 2px;
+    width: 33%;
+}
+
+
+
+.container{
+    margin: 10px;
+    height: 90vh;
+    display: flex;
+
+}
+.sidebar{
+    width: 20%;
+}
+.content{
+    width: 50%;
+    overflow: auto;
+    
+}
+
+.op{
+    margin: 3px;
+    padding: 20px;
+}
+
+.head{
+    display: flex;
+    height: 10%;
+    align-items: center;
+    justify-content: space-around;
+}
+.post{
+    width: 50%;
+    height: 70%;
+    margin: 10px;
+    margin-left: 20%;
+    margin-bottom: 0px;
+    border: 2px solid black;
+}
+.profile1{
+    height: 70%;
+    width: 15%;
+    /* margin: 5px 0px 5px 2px; */
+}
+.profile_name{
+    width: 70%;
+    height: 70%;
+    /* margin: 5px 0px 5px 2px; */
+}
+.three_dots{
+    height: 70%;
+    width: 15%;
+    /* margin: 5px 2px 5px 2px; */
+}
+.image{
+    height: 65%;
+}
+.description{
+    height: 10%;
+}
+.option{
+    height: 12%;
+}
+.like,.comment,.share{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 0.1rem solid black; */
+}
+.hr_1{
+    margin: 10% 5%;
+    border: 1px solid black;
+}
+.hr_2{
+    margin: 30% 5% 10% 5%;
+    border: 1px solid black;
+}
+
+.foot{
+    text-align: center;
+    height: 5vh;
+    margin: 0% 10px 10px 10px;
+}
+
+
+.ball{
+    height: 80%;
+    width: 25%;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+
+/*############################               Dark Mode           #########################################*/
+
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.navbar, .sidebar, .post, .profile, .messages, .content, .hr_1, .hr_2, .message_content, .links {
+    border-color: black;
+}
+
+body.dark {
+    background-color: #333;
+    color: white;
+    border-color: white;
+}
+
+body.dark .navbar,
+body.dark .sidebar,
+body.dark .post,
+body.dark .profile,
+body.dark .messages,
+body.dark .content,
+body.dark .hr_1,
+body.dark .hr_2,
+body.dark .message_content,
+body.dark .links {
+    border-color: white; 
+}
+
+body.dark .dark_mode_icon {
+    border-color: white;
+}
+
+body.dark .ball {
+    border-color: white;
+}
+
+
+body.dark .sidebar_options .op {
+    color: white;
+}
+
+body.dark .message_content {
+    border-color: #444;
+}
+
+body.dark .message_container {
+    border-color: #444;
+}
+
+* {
+    transition: border-color 0.3s ease;
+}
+
+
+/*########################            Message Container              ##########################*/
+
+.messages {
+    width: 30%;
+    margin-left: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.messages .message {
+    margin: 0.5%;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.message_container {
+    height: 70%;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message_content {
+    display: flex;
+    margin: 1% 0;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.message_content:hover {
+    background-color: #e8e8e8;
+    border-color: #ccc;
+}
+
+.message_content .profile1 {
+    width: 15%;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.message_content .profile1 img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.message_content .profile_name {
+    flex: 1;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.message_content .dot {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.links {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.links a {
+    color: #007BFF;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+body.dark .messages {
+    background-color: #333;
+    color: white;
+}
+
+body.dark .message {
+    color: #ffffff;
+}
+
+body.dark .message_content {
+    background-color: black;
+    border-color: #666;
+}
+
+body.dark .message_content:hover {
+    background-color: #555;
+    border-color: #777;
+}
+
+body.dark .links a {
+    color: #5d9bf5;
+}
+
+body.dark .links a:hover {
+    color: #a1c4f7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*############################               Post                #########################*/
+
+.post .option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.post .option .like,
+.post .option .comment,
+.post .option .share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.post .option .like:hover,
+.post .option .comment:hover,
+.post .option .share:hover {
+    color: red;
+}
+
+.post .option.like.liked{
+    color: red;
+}
+
+body.dark .content {
+    background-color: #333;
+}
+
+body.dark .post {
+    background-color: black;
+    border-color: #666;
+}
+
+body.dark .post .head .profile_name {
+    color: #fff;
+}
+
+body.dark .post .head .three_dots {
+    color: #ccc;
+}
+
+body.dark .post .image {
+    background-color: #555;
+}
+
+body.dark .post .description {
+    color: #ddd;
+}
+
+body.dark .post .option .like,
+body.dark .post .option .comment,
+body.dark .post .option .share {
+    color: #bbb;
+}
+
+body.dark .post .option .like .liked{
+    color: red;
+}
+
+body.dark .post .option .like:hover,
+body.dark .post .option .comment:hover,
+body.dark .post .option .share:hover {
+    color: red;
+}
+
+body.dark .post:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+/*################################               Sidebar               ###########################*/
+
+.sidebar .op a{
+    text-decoration: none ;
+    color: black;
+}
+
+.sidebar {
+    width: 20%;
+    height: 95%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .brand1 {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.sidebar .sidebar_options {
+    margin-top: 30px;
+}
+
+.sidebar .op {
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.sidebar .op:hover {
+    background-color: red;
+    color: white;
+}
+
+.sidebar .hr_1 {
+    margin: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.sidebar .profile {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .profile:hover {
+    background-color: #f0f0f0;
+    color: red;
+}
+
+.sidebar .profile i {
+    margin-right: 10px;
+}
+
+.sidebar .brand_name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+body.dark .sidebar {
+    background-color: #333;
+    color: white;
+}
+
+body.dark .sidebar .brand_name {
+    color: white;
+}
+
+body.dark .sidebar .op {
+    color: #bbb;
+}
+
+body.dark .sidebar .op:hover {
+    background-color: red;
+    color: white;
+}
+
+body.dark .sidebar .profile {
+    color: #bbb;
+}
+
+body.dark .sidebar .profile:hover {
+    background-color: #444;
+    color: red;
+}
+
+body.dark .sidebar .hr_1 {
+    border-top: 1px solid #555;
+}
+
+
+
+
+
+/*#############################                   Navbar                  ##############################*/
+
+.navbar {
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ddd;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Branding in Navbar */
+.navbar .brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .brand_name {
+    margin-left: 10px;
+    font-size: 1.8rem;
+    color: black;
+}
+
+/* Search Bar */
+.navbar .search_bar {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.navbar #search {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.navbar #search:focus {
+    border: 2px solid red;
+}
+
+/* Search Icon */
+.navbar .search_icon {
+    position: absolute;
+    right: 10px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Icons (Profile, Settings, Plus) */
+.navbar .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .icons div {
+    margin-left: 20px;
+    font-size: 1.5rem;
+    color: black;
+    cursor: pointer;
+}
+
+.navbar .icons div:hover {
+    color: red;
+}
+
+/* Dark Mode Toggle */
+.navbar .dark_mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .dark_mode_icon {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .dark_mode .ball {
+    height: 80%;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+/* Hover Effects */
+.navbar .icons div:hover, .navbar .dark_mode_icon:hover {
+    color: red;
+    background-color: #f0f0f0;
+}
+
+/* Dark Mode Styling for Navbar */
+body.dark .navbar {
+    background-color: #333;
+    color: white;
+    border-bottom: 2px solid #444;
+}
+
+body.dark .navbar .brand_name {
+    color: white;
+}
+
+body.dark .navbar #search {
+    background-color: #444;
+    color: white;
+    border: 1px solid #555;
+}
+
+body.dark .navbar #search:focus {
+    border-color: red;
+}
+
+body.dark .navbar .search_icon {
+    color: white;
+}
+
+body.dark .navbar .icons div {
+    color: #bbb;
+}
+
+body.dark .navbar .icons div:hover {
+    color: red;
+    background-color: #333;
+}
+
+body.dark .navbar .dark_mode_icon {
+    background-color: #333;
+}
+body.dark .navbar .dark_mode .ball {
+    background-color: #333;
+}
+
+.profile1{
+    border-radius: 50%;
+    border: 1px solid black;
+    height: 80%;;
+    width: 12%;
+}
+.message_content .profile1{
+    border-radius: 50%;
+    border: 1px solid black;
+    height: 30px;
+    width: 25px;
+    margin-right: 30px;
+}
