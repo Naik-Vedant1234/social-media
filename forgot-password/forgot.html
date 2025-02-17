@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forgot.css">
+    <title>Forgot Password</title>
+</head>
+<body>
+    <div id="forgot-password-container">
+        <h2>Forgot Password</h2>
+        <p>Please enter your email address. We will send you a OTP to reset your password.</p>
+        <form id="forgot-password-form">
+            <input type="email" id="reset-email" placeholder="Enter your email" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="otp-step" style="display: none;">
+        <p>An OTP has been sent to your email. Please enter it below to proceed with the password reset.</p>
+        <form id="otp-form">
+            <input type="text" id="otp" placeholder="Enter OTP" required>
+            <button type="submit">Verify OTP</button>
+        </form>
+    </div>
+    <div id="rst-pass" style="display: none;">
+        <p>An OTP has been sent to your email. Please enter it below to proceed with the password reset.</p>
+        <form id="rst-pass">
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Choose a password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+            </div>
+            <button type="submit" class="sign-up-btn">Reset Password</button>
+        </form>
+    </div>
+
+    <script src="forgot.js"></script>
+</body>
+</html>

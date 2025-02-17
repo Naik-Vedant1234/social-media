@@ -1,0 +1,914 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar{
+    height: 7vh;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0% 10px 10px 10px;
+    border-bottom: 2px solid black;
+}
+.brand{
+    display: flex;
+    width: 30%;
+}
+.brand1{
+    width: 75%;
+    display: flex;
+    height: 40px;
+}
+#search{
+    height: 75%;
+    width: 80%;
+}
+
+.dark_mode{
+    height: 50%;
+    width: 8%;
+    /* border: 0.1rem solid black; */
+    align-self: center;
+}
+
+.search_icon{
+    background-color: red;
+    height: 75%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icons{
+    display: flex;
+}
+
+.profile, .settings, .plus{
+    padding: 5px;
+    margin: 2px;
+    width: 33%;
+}
+
+
+
+.container{
+    margin: 10px;
+    height: 90vh;
+    display: flex;
+
+}
+.sidebar{
+    width: 20%;
+}
+.content {
+    flex: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #b30000;
+    overflow: auto;
+}
+
+.op{
+    margin: 3px;
+    padding: 20px;
+}
+
+.head{
+    display: flex;
+    height: 10%;
+    align-items: center;
+    justify-content: space-around;
+}
+.post {
+    width: 50%;
+    height: 70%;
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    margin-left: 15%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #b30000;
+}
+.profile1{
+    height: 70%;
+    width: 15%;
+    /* margin: 5px 0px 5px 2px; */
+}
+.profile_name{
+    width: 70%;
+    height: 70%;
+    /* margin: 5px 0px 5px 2px; */
+}
+.three_dots{
+    height: 70%;
+    width: 15%;
+    /* margin: 5px 2px 5px 2px; */
+}
+.image{
+    height: 65%;
+}
+.description{
+    height: 10%;
+}
+.option{
+    height: 12%;
+}
+.like,.comment,.share{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 0.1rem solid black; */
+}
+.hr_1{
+    margin: 10% 5%;
+    border: 1px solid black;
+}
+.hr_2{
+    margin: 30% 5% 10% 5%;
+    border: 1px solid black;
+}
+
+.foot{
+    text-align: center;
+    height: 5vh;
+    margin: 0% 10px 10px 10px;
+}
+
+
+
+
+
+/*############################               Dark Mode           #########################################*/
+
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.navbar, .sidebar, .post, .profile, .messages, .content, .hr_1, .hr_2, .message_content, .links {
+    border-color: black;
+}
+
+body.dark {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+body.dark .navbar,
+body.dark .sidebar,
+body.dark .post,
+body.dark .profile,
+body.dark .messages,
+body.dark .content,
+body.dark .hr_1,
+body.dark .hr_2,
+body.dark .message_content,
+body.dark .links {
+    border-color: white; 
+}
+
+body.dark .dark_mode_icon {
+    border-color: white;
+}
+
+body.dark .ball {
+    border: 1px solid white;
+}
+
+
+body.dark .sidebar_options .op {
+    color: white;
+}
+
+body.dark .message_content {
+    border-color: #444;
+}
+
+body.dark .message_container {
+    border-color: #444;
+}
+
+* {
+    transition: border-color 0.3s ease;
+}
+
+
+
+/*########################            Message Container              ##########################*/
+
+.messages {
+    flex: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #b30000;
+}
+
+.messages .message {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #b30000;
+    color: black;
+    font-weight: bold;
+}
+
+.message_container {
+    height: 70%;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message_content {
+    display: flex;
+    margin: 1% 0;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.message_content:hover {
+    background-color: #e8e8e8;
+    border-color: #ccc;
+}
+
+.message_content .profile1 {
+    width: 15%;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.message_content .profile1 img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.message_content .profile_name {
+    flex: 1;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.message_content .dot {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.links {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.links a {
+    color: #007BFF;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+body.dark .messages {
+    background: black;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+}
+
+body.dark .message {
+    background: #1a1a1a;
+    color: white;
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.3);
+}
+
+body.dark .message_content {
+    background-color: black;
+    border-color: #666;
+}
+
+body.dark .message_content:hover {
+    background-color: #555;
+    border-color: #777;
+}
+
+body.dark .links a {
+    color: #5d9bf5;
+}
+
+body.dark .links a:hover {
+    color: #a1c4f7;
+}
+body.dark .message:hover {
+    background: #b30000;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*############################               Post                #########################*/
+
+.post .option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.post .option .like,
+.post .option .comment,
+.post .option .share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.post .option .like:hover,
+.post .option .comment:hover,
+.post .option .share:hover {
+    color: red;
+}
+
+.post .option.like.liked{
+    color: red;
+}
+
+body.dark .content {
+    background: black;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+}
+
+body.dark .post {
+    background: #1a1a1a;
+    color: white;
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.3);
+}
+
+body.dark .post .head .profile_name {
+    color: #fff;
+}
+
+body.dark .post .head .three_dots {
+    color: #ccc;
+}
+
+body.dark .post .image {
+    background-color: #555;
+}
+
+body.dark .post .description {
+    color: #ddd;
+}
+
+body.dark .post .option .like,
+body.dark .post .option .comment,
+body.dark .post .option .share {
+    color: #bbb;
+}
+
+body.dark .post .option .like .liked{
+    color: red;
+}
+
+body.dark .post .option .like:hover,
+body.dark .post .option .comment:hover,
+body.dark .post .option .share:hover {
+    color: red;
+}
+
+body.dark .post:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+/*################################               Sidebar               ###########################*/
+
+.sidebar .op {
+    text-decoration: none ;
+    color: black;
+}
+
+.sidebar {
+    width: 20%;
+    height: 95%;
+    left: 0;
+    top: 0;
+    background: white;
+    padding: 20px;
+    color: black;
+    border-right: 2px solid #b30000;
+    transition: 0.3s ease-in-out;
+}
+
+.sidebar .brand1 {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.sidebar .sidebar_options {
+    margin-top: 30px;
+}
+
+.sidebar .op {
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+    color: black;
+}
+
+.sidebar .op:hover {
+    background: #b30000;
+    color: white;
+}
+
+.sidebar .hr_1 {
+    margin: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.sidebar .profile {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .profile:hover {
+    background-color: #f0f0f0;
+    color: red;
+}
+
+.sidebar .profile i {
+    margin-right: 10px;
+}
+
+.sidebar .brand_name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+body.dark .sidebar {
+    background: black;
+    color: white;
+    border-right: 2px solid #b30000;
+}
+
+body.dark .sidebar .brand_name {
+    color: white;
+}
+
+body.dark .sidebar .op {
+    color: white;
+}
+
+body.dark .sidebar .op:hover {
+    background: #b30000;
+    color: black;
+}
+
+body.dark .sidebar .profile {
+    color: #bbb;
+}
+
+body.dark .sidebar .profile:hover {
+    background-color: #444;
+    color: red;
+}
+
+body.dark .sidebar .hr_1 {
+    border-top: 1px solid #555;
+}
+
+
+
+
+
+/*#############################                   Navbar                  ##############################*/
+
+.navbar {
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #b30000; /* Red */
+    color: white;
+    border-bottom: 2px solid black;
+}
+
+.navbar .brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .brand_name {
+    margin-left: 10px;
+    font-size: 1.8rem;
+    color: black;
+}
+
+.navbar .search_bar {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.navbar #search {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.navbar #search:focus {
+    border: 2px solid black;
+}
+
+.navbar .search_icon {
+    position: absolute;
+    right: 10px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .icons div {
+    margin-left: 20px;
+    font-size: 1.5rem;
+    color: black;
+    cursor: pointer;
+}
+
+.navbar .icons div:hover {
+    color: red;
+}
+
+
+.navbar .dark_mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .dark_mode_icon {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .dark_mode .ball {
+    height: 80%;
+    width: 80%;
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.navbar .icons div:hover, .navbar .dark_mode_icon:hover {
+    color: red;
+    background-color: #f0f0f0;
+}
+
+body.dark .navbar {
+    background-color: #b30000; 
+    color: black;
+}
+
+body.dark .navbar .brand_name {
+    color: white;
+}
+
+body.dark .navbar #search {
+    background-color: #444;
+    color: white;
+    border: 1px solid #555;
+}
+
+body.dark .navbar #search:focus {
+    border-color: white;
+}
+
+body.dark .navbar .search_icon {
+    color: white;
+}
+
+body.dark .navbar .icons div {
+    color: #bbb;
+}
+
+body.dark .navbar .icons div:hover {
+    color: red;
+    background-color: #333;
+}
+
+body.dark .navbar .dark_mode_icon {
+    background-color: #333;
+}
+body.dark .navbar .dark_mode .ball {
+    background-color: #333;
+    border: 2px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+.loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.spinner {
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-top: 5px solid red;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.notification-panel {
+    position: fixed;
+    right: 10px;
+    top: 50px;
+    width: 300px;
+    background: white;
+    border: 1px solid black;
+    padding: 10px;
+    display: none;
+}
+
+.notif-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.close-notif {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+body .notif-content{
+    padding: 5px;
+    margin: 5px 0px;
+}
+
+
+body.dark .notif-dropdown {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .notif-item {
+    background: #2b2b2b;
+    border-bottom: 1px solid #333;
+    color: white;
+}
+
+body.dark .notif-item:hover {
+    background: #3a3a3a;
+}
+
+body.dark .notif-header {
+    background: red;
+    color: white;
+    border-bottom: 1px solid #550000;
+}
+
+body.dark .notif-close {
+    background: red;
+    color: white;
+    border: none;
+}
+
+body.dark .notif-close:hover {
+    background: #b30000;
+}
+body.dark .notif-content{
+    color: black;
+    padding: 5px;
+    margin: 5px 0px;
+}
+
+
+
+
+.chatbot {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chat-header {
+    background: red;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+}
+
+.chat-content {
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column; 
+}
+
+.messages div {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word; 
+}
+
+.user-message {
+    background: #d1e7ff;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.bot-message {
+    background: #ffe6e6;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background: white;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.send-message {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* Dark Mode for Chatbot */
+body.dark .chatbot {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+}
+
+body.dark .chat-header {
+    background: red;
+    color: white;
+}
+
+body.dark .chat-content {
+    background: #2b2b2b;
+}
+
+body.dark .user-message {
+    background: #444;
+    color: white;
+}
+
+body.dark .bot-message {
+    background: #550000;
+    color: white;
+}
+
+body.dark .chat-input {
+    background: #1a1a1a;
+    border-top: 1px solid #333;
+}
+
+body.dark .chat-input input {
+    background: #333;
+    color: white;
+    border: 1px solid gray;
+}
+
+body.dark .send-message {
+    background: red;
+    color: white;
+    border: none;
+}
+
+body.dark .send-message:hover {
+    background: #b30000;
+}

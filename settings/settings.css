@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+.settings-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: red;
+}
+
+.settings-list {
+    list-style: none;
+    padding: 0;
+}
+
+.settings-list li {
+    margin: 15px 0;
+}
+
+.settings-list a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    background: red;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: block;
+    transition: 0.3s;
+}
+
+.settings-list a:hover {
+    background: darkred;
+    color: white;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.dark-mode .settings-container {
+    background: #2b2b2b;
+    color: white;
+}
+
+.dark-mode .settings-list a {
+    background: #444;
+    color: white;
+}
+
+.dark-mode .settings-list a:hover {
+    background: red;
+}
